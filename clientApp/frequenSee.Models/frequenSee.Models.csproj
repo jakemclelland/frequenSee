@@ -42,10 +42,15 @@
   <ItemGroup>
     <Compile Include="CategoryEnum.cs" />
     <Compile Include="CategorySymbolFrequency.cs" />
+    <Compile Include="CategoryWordFrequency.cs" />
     <Compile Include="ContentSource.cs" />
+    <Compile Include="DigestType.cs" />
     <Compile Include="FoundSymbol.cs" />
+    <Compile Include="FoundWord.cs" />
+    <Compile Include="FrequencyResultSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SymbolFrequencyResultSet.cs" />
+    <Compile Include="WordFrequencyResultSet.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

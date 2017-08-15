@@ -6,6 +6,6 @@ namespace frequenSee.Models
     {
         public SortedDictionary<char, CategorySymbolFrequency> SymbolDictionary { get; set; } = new SortedDictionary<char, CategorySymbolFrequency>();
 
-        public ContentSource Source { get; set; }
+        public ContentSource Source { get; set; } = new ContentSource();
     }
 }

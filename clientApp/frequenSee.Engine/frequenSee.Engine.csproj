@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SymbolDigester.cs" />
+    <Compile Include="InputDigester.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\frequenSee.Models\frequenSee.Models.csproj">
