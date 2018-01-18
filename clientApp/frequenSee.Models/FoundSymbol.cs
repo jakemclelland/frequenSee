@@ -1,6 +1,8 @@
-﻿namespace frequenSee.Models
+﻿using frequenSee.Common.Interfaces;
+
+namespace frequenSee.Models
 {
-    public class FoundSymbol
+    public class FoundSymbol : IModelBase
     {
         public FoundSymbol(int id, string symbol)
         {

@@ -1,6 +1,8 @@
-﻿namespace frequenSee.Models
+﻿using frequenSee.Common.Interfaces;
+
+namespace frequenSee.Models
 {
-    public class ContentSource
+    public class ContentSource : IModelBase
     {
         public int SourceId { get; set; }
 

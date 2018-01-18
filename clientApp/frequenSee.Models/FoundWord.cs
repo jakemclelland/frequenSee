@@ -1,6 +1,8 @@
-﻿namespace frequenSee.Models
+﻿using frequenSee.Common.Interfaces;
+
+namespace frequenSee.Models
 {
-    public class FoundWord
+    public class FoundWord : IModelBase
     {
         public FoundWord(int id, string text)
         {

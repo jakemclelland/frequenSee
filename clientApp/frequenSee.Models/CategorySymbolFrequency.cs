@@ -1,6 +1,8 @@
-﻿namespace frequenSee.Models
+﻿using frequenSee.Common.Interfaces;
+
+namespace frequenSee.Models
 {
-    public class CategorySymbolFrequency
+    public class CategorySymbolFrequency : IModelBase
     {
         public CategorySymbolFrequency(int id, FoundSymbol foundSymbol, int hits)
         {

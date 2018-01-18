@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>frequenSee.Engine.Tests</RootNamespace>
     <AssemblyName>frequenSee.Engine.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
@@ -19,6 +19,7 @@
     <TestProjectType>UnitTest</TestProjectType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,11 +51,25 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="InputDigesterTests.cs" />
+    <Compile Include="RepositoryTests.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\frequenSee.Common\frequenSee.Common.csproj">
+      <Project>{afd1e494-0b31-4dc9-a88b-8c26e4ef8b2f}</Project>
+      <Name>frequenSee.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\frequenSee.Data.Entities\frequenSee.Data.Entities.csproj">
+      <Project>{DDB53BDC-3455-481E-A314-CC4688B2167A}</Project>
+      <Name>frequenSee.Data.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\frequenSee.Data\frequenSee.Data.csproj">
+      <Project>{DD521325-98B4-408A-8407-ED58882812AF}</Project>
+      <Name>frequenSee.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\frequenSee.Engine\frequenSee.Engine.csproj">
       <Project>{62767E11-BF4A-456F-B98F-1FBC6CB789E6}</Project>
       <Name>frequenSee.Engine</Name>
