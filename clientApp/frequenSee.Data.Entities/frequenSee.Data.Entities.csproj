@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CategorySymbolFrequencyRepository.cs" />
+    <Compile Include="CategoryWordFrequencyRepository.cs" />
     <Compile Include="ContentSourceRepository.cs" />
+    <Compile Include="FoundSymbolRepository.cs" />
+    <Compile Include="FoundWordRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

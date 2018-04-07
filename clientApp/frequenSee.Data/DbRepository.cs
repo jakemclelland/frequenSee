@@ -17,6 +17,8 @@ namespace frequenSee.Data
 
         public string MappedTableName { get; set; }
 
+        private bool checkTableExists = true;
+
         public DbRepository()
         {
             this.DataFilePath = "frequenSee.sqlite";
@@ -40,6 +42,12 @@ namespace frequenSee.Data
 
         public InsertedResponse Insert(M model)
         {
+            if (checkTableExists)
+            {
+                this.Context.EnsureTableExists(this.MappedTableName, this.BuildCreateTableStatement());
+                checkTableExists = false;
+            }
+
             return this.Context.Insert<M>(this.InsertStatement, this.MappedTableName, model);
         }
 
@@ -87,8 +95,6 @@ namespace frequenSee.Data
         {
             return new List<string>();
         }
-
-        //public M Model { get; set; }
 
         public List<String> FieldList { get; set; }
 

@@ -124,7 +124,7 @@
             }
         }
 
-        private void EnsureTableExists(string tableName, string createStatement)
+        public void EnsureTableExists(string tableName, string createStatement)
         {
             this.EnsureDbOpen();
 
