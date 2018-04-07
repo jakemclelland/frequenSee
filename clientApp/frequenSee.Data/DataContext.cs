@@ -1,7 +1,7 @@
 ﻿namespace frequenSee.Data
 {
     using Dapper;
-    using frequenSee.Common.Interfaces;
+    using frequenSee.Data.Interfaces;
     using System;
     using System.Collections.Generic;
     using System.Data;
@@ -70,23 +70,24 @@
 
                 throw;
             }
+            finally
+            {
+                this.SQLiteConnection.Close();
+            }
 
             return response;
         }
 
-        public InsertedResponse Save<E, M>(E entity)
+        public InsertedResponse Insert<M>(string insertStatement, string tableName, M model)
             where M : IModelBase
-            where E : EntityBase<M>
         {
             InsertedResponse response = new InsertedResponse();
-
-            string insertStatement = entity.BuildInsertStatement<E>(entity, true);
-
+            
             try
             {
                 this.EnsureDbOpen();
 
-                response.SavedEntityKey = this.SQLiteConnection.Query<int>(insertStatement, entity).First();
+                response.SavedEntityKey = this.SQLiteConnection.Query<int>(insertStatement, model).First();
 
                 response.State = DbResponseState.Success;
             }
@@ -98,20 +99,41 @@
 
                 throw;
             }
+            finally
+            {
+                this.SQLiteConnection.Close();
+            }
+
+            return response;
+        }
+
+        public ExecutionResponse CreateTable(string createStatement)
+        {
+            ExecutionResponse response = new ExecutionResponse();
+
+            response = this.ExecuteNonQuery(createStatement);
 
             return response;
         }
 
         private void EnsureDbOpen()
         {
-            if (this.SQLiteConnection == null)
-            {
-                throw new NullReferenceException("Please provide a connection");
-            }
-
-            if (this.SQLiteConnection.State != ConnectionState.Open)
+            if (this.SQLiteConnection == null || this.SQLiteConnection.State != ConnectionState.Open)
             {
                 this.Open();
+            }
+        }
+
+        private void EnsureTableExists(string tableName, string createStatement)
+        {
+            this.EnsureDbOpen();
+
+            var tableExistsSql = $"SELECT name FROM sqlite_master WHERE type='table' AND name='{tableName}';";
+            var isTableExists = this.SQLiteConnection.Query<string>(tableExistsSql).ToList();
+
+            if (!isTableExists.Any())
+            {
+                this.CreateTable(createStatement);
             }
         }
     }

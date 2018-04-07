@@ -11,9 +11,5 @@ namespace frequenSee.Data
         string DataFilePath { get; set; }
 
         DataContext Context { get; set; }
-
-        void SeedDataSchema();
-
-        // List
     }
 }

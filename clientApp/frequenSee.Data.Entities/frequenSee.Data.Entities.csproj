@@ -43,18 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CategorySymbolFrequencyEntity.cs" />
-    <Compile Include="CategoryWordFrequencyEntity.cs" />
-    <Compile Include="ContentSourceEntity.cs" />
     <Compile Include="ContentSourceRepository.cs" />
-    <Compile Include="FoundSymbolEntity.cs" />
-    <Compile Include="FoundWordEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\frequenSee.Common\frequenSee.Common.csproj">
-      <Project>{afd1e494-0b31-4dc9-a88b-8c26e4ef8b2f}</Project>
-      <Name>frequenSee.Common</Name>
+    <ProjectReference Include="..\frequenSee.Data.Interfaces\frequenSee.Data.Interfaces.csproj">
+      <Project>{6a9650d2-1082-446a-b95b-b654f81651f0}</Project>
+      <Name>frequenSee.Data.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\frequenSee.Data\frequenSee.Data.csproj">
       <Project>{dd521325-98b4-408a-8407-ed58882812af}</Project>

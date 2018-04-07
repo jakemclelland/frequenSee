@@ -1,8 +1,8 @@
-﻿using frequenSee.Common.Interfaces;
+﻿using frequenSee.Data.Interfaces;
 
 namespace frequenSee.Models
 {
-    public class CategoryWordFrequency : IModelBase
+    public class CategoryWordFrequency : ICategoryWordFrequency
     {
         public CategoryWordFrequency(int id, FoundWord foundWord, int hits)
         {
@@ -14,6 +14,14 @@ namespace frequenSee.Models
         public int FrequencyId { get; set; }
 
         public FoundWord FoundWord { get; set; }
+
+        public int? FoundWordId
+        {
+            get
+            {
+                return this.FoundWord?.WordId;
+            }
+        }
 
         public int Hits { get; set; }
     }

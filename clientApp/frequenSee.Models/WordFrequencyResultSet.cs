@@ -1,11 +1,10 @@
 ﻿namespace frequenSee.Models
 {
-    using frequenSee.Common.Interfaces;
     using System;
     using System.Collections.Generic;
     using System.Text;
 
-    public class WordFrequencyResultSet : IModelBase
+    public class WordFrequencyResultSet
     {
         private StringBuilder Cache { get; set; } = new StringBuilder(100);
 

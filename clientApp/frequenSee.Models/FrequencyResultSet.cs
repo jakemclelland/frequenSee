@@ -1,8 +1,6 @@
-﻿using frequenSee.Common.Interfaces;
-
-namespace frequenSee.Models
+﻿namespace frequenSee.Models
 {
-    public class FrequencyResultSet : IModelBase
+    public class FrequencyResultSet
     {
         public SymbolFrequencyResultSet FoundSymbolFrequencyResultSet { get; set; } = new SymbolFrequencyResultSet();
 

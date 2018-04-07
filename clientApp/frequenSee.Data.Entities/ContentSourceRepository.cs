@@ -1,4 +1,5 @@
-﻿using frequenSee.Models;
+﻿using frequenSee.Data.Interfaces;
+using frequenSee.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace frequenSee.Data.Entities
 {
-    public class ContentSourceRepository : DbRepository
+    public class ContentSourceRepository : DbRepository<IContentSource>
     {
-        public InsertedResponse SaveContentSource(ContentSourceEntity entity)
+        public ContentSourceRepository()
         {
-            return this.Save<ContentSourceEntity, ContentSource>(entity);
+            this.MappedTableName = "ContentSource";
         }
     }
 }

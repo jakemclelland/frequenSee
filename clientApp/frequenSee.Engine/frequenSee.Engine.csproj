@@ -48,10 +48,6 @@
     <Compile Include="InputDigester.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\frequenSee.Common\frequenSee.Common.csproj">
-      <Project>{afd1e494-0b31-4dc9-a88b-8c26e4ef8b2f}</Project>
-      <Name>frequenSee.Common</Name>
-    </ProjectReference>
     <ProjectReference Include="..\frequenSee.Models\frequenSee.Models.csproj">
       <Project>{3cf50301-3eab-4a13-99b9-8673b10e9909}</Project>
       <Name>frequenSee.Models</Name>

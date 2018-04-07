@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using frequenSee.Data.Entities;
 using frequenSee.Models;
+using frequenSee.Data.Interfaces;
 
 namespace frequenSee.Engine.Tests
 {
@@ -27,10 +28,9 @@ namespace frequenSee.Engine.Tests
         [TestMethod]
         public void SaveAnything()
         {
-
-            ContentSourceEntity content = new ContentSourceEntity(new ContentSource { Category = CategoryEnum.Personal, SourceId = 1, SourceUri = "xyz" });
+            IContentSource content = new ContentSource { Category = CategoryEnum.Personal, SourceId = 1, SourceUri = "xyz" };
             ContentSourceRepository repo = new ContentSourceRepository();
-            var response = repo.SaveContentSource(content);
+            var response = repo.Insert(content);
         }
     }
 }

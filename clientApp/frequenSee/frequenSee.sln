@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frequenSee.Data", "..\frequ
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frequenSee.Data.Entities", "..\frequenSee.Data.Entities\frequenSee.Data.Entities.csproj", "{DDB53BDC-3455-481E-A314-CC4688B2167A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frequenSee.Common", "..\frequenSee.Common\frequenSee.Common.csproj", "{AFD1E494-0B31-4DC9-A88B-8C26E4EF8B2F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frequenSee.Data.Interfaces", "..\frequenSee.Data.Interfaces\frequenSee.Data.Interfaces.csproj", "{6A9650D2-1082-446A-B95B-B654F81651F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,10 +47,10 @@ Global
 		{DDB53BDC-3455-481E-A314-CC4688B2167A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DDB53BDC-3455-481E-A314-CC4688B2167A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DDB53BDC-3455-481E-A314-CC4688B2167A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AFD1E494-0B31-4DC9-A88B-8C26E4EF8B2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AFD1E494-0B31-4DC9-A88B-8C26E4EF8B2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AFD1E494-0B31-4DC9-A88B-8C26E4EF8B2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AFD1E494-0B31-4DC9-A88B-8C26E4EF8B2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A9650D2-1082-446A-B95B-B654F81651F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A9650D2-1082-446A-B95B-B654F81651F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A9650D2-1082-446A-B95B-B654F81651F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A9650D2-1082-446A-B95B-B654F81651F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -61,6 +61,6 @@ Global
 		{3CF50301-3EAB-4A13-99B9-8673B10E9909} = {31CDC4FD-CF20-44A0-8D56-27D6E1FA7E4E}
 		{DD521325-98B4-408A-8407-ED58882812AF} = {6327C3AE-B188-4B55-9425-5BDCCE839E54}
 		{DDB53BDC-3455-481E-A314-CC4688B2167A} = {6327C3AE-B188-4B55-9425-5BDCCE839E54}
-		{AFD1E494-0B31-4DC9-A88B-8C26E4EF8B2F} = {31CDC4FD-CF20-44A0-8D56-27D6E1FA7E4E}
+		{6A9650D2-1082-446A-B95B-B654F81651F0} = {6327C3AE-B188-4B55-9425-5BDCCE839E54}
 	EndGlobalSection
 EndGlobal
