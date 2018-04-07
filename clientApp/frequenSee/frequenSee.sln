@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frequenSee.Data.Entities", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frequenSee.Data.Interfaces", "..\frequenSee.Data.Interfaces\frequenSee.Data.Interfaces.csproj", "{6A9650D2-1082-446A-B95B-B654F81651F0}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{AD898707-C10B-439B-9BA1-1D0396732EB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "frequenSee.Client", "..\frequenSee.Client\frequenSee.Client.csproj", "{A95A0F2E-0D9C-4354-AFC7-68A35411C712}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,10 @@ Global
 		{6A9650D2-1082-446A-B95B-B654F81651F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A9650D2-1082-446A-B95B-B654F81651F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A9650D2-1082-446A-B95B-B654F81651F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A95A0F2E-0D9C-4354-AFC7-68A35411C712}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A95A0F2E-0D9C-4354-AFC7-68A35411C712}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A95A0F2E-0D9C-4354-AFC7-68A35411C712}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A95A0F2E-0D9C-4354-AFC7-68A35411C712}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +70,6 @@ Global
 		{DD521325-98B4-408A-8407-ED58882812AF} = {6327C3AE-B188-4B55-9425-5BDCCE839E54}
 		{DDB53BDC-3455-481E-A314-CC4688B2167A} = {6327C3AE-B188-4B55-9425-5BDCCE839E54}
 		{6A9650D2-1082-446A-B95B-B654F81651F0} = {6327C3AE-B188-4B55-9425-5BDCCE839E54}
+		{A95A0F2E-0D9C-4354-AFC7-68A35411C712} = {AD898707-C10B-439B-9BA1-1D0396732EB6}
 	EndGlobalSection
 EndGlobal
