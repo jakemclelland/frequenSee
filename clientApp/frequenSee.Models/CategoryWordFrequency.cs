@@ -23,6 +23,14 @@ namespace frequenSee.Models
             }
         }
 
+        public string DisplayText
+        {
+            get
+            {
+                return this.FoundWord?.Text;
+            }
+        }
+
         public int Hits { get; set; }
     }
 }

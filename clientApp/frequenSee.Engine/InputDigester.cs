@@ -17,14 +17,14 @@
                 {
                     var c = *pChar;
 
-                    if (digestType == DigestType.Symbols)
+                    if (digestType.HasFlag(DigestType.Symbols))
                     {
                         UpdateSymbolFrequency(result.FoundSymbolFrequencyResultSet, c);
                     }
 
                     pChar++;
 
-                    if (digestType == DigestType.Words)
+                    if (digestType.HasFlag(DigestType.Words))
                     {
                         UpdateWordFrequency(result.FoundWordFrequencyResultSet, c);
                     }

@@ -46,6 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnalisisView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AnalisisView.Designer.cs">
+      <DependentUpon>AnalisisView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AnalyzationManager.cs" />
     <Compile Include="InputView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +61,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AnalisisView.resx">
+      <DependentUpon>AnalisisView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InputView.resx">
       <DependentUpon>InputView.cs</DependentUpon>
     </EmbeddedResource>
@@ -67,6 +77,10 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\frequenSee.Models.AnalyzationRequest.datasource" />
+    <None Include="Properties\DataSources\frequenSee.Models.AnalyzationResponse.datasource" />
+    <None Include="Properties\DataSources\frequenSee.Models.CategorySymbolFrequency.datasource" />
+    <None Include="Properties\DataSources\frequenSee.Models.CategoryWordFrequency.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -79,6 +93,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\frequenSee.Engine\frequenSee.Engine.csproj">
+      <Project>{62767e11-bf4a-456f-b98f-1fbc6cb789e6}</Project>
+      <Name>frequenSee.Engine</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\frequenSee.Models\frequenSee.Models.csproj">
+      <Project>{3cf50301-3eab-4a13-99b9-8673b10e9909}</Project>
+      <Name>frequenSee.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
