@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.FoundSymbolsGrid = new System.Windows.Forms.DataGridView();
             this.analyzationResponseBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.FoundWordsGrid = new System.Windows.Forms.DataGridView();
@@ -64,7 +65,7 @@
             this.FoundSymbolsGrid.RowTemplate.Height = 28;
             this.FoundSymbolsGrid.Size = new System.Drawing.Size(394, 535);
             this.FoundSymbolsGrid.TabIndex = 0;
-            this.FoundSymbolsGrid.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.FoundSymbolsGrid_RowPostPaint);
+            this.FoundSymbolsGrid.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.FoundSymbolsGrid_DataBindingComplete);
             // 
             // analyzationResponseBindingSource
             // 
@@ -78,6 +79,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.FoundWordsGrid.AutoGenerateColumns = false;
+            this.FoundWordsGrid.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableAlwaysIncludeHeaderText;
             this.FoundWordsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.FoundWordsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.hitsDataGridViewTextBoxColumn1,
@@ -87,10 +89,21 @@
             this.FoundWordsGrid.Location = new System.Drawing.Point(425, 12);
             this.FoundWordsGrid.Name = "FoundWordsGrid";
             this.FoundWordsGrid.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.Format = "N2";
+            dataGridViewCellStyle2.NullValue = null;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.FoundWordsGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.FoundWordsGrid.RowTemplate.Height = 28;
             this.FoundWordsGrid.Size = new System.Drawing.Size(424, 535);
             this.FoundWordsGrid.TabIndex = 0;
-            this.FoundWordsGrid.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.FoundWordsGrid_RowPostPaint);
+            this.FoundWordsGrid.DataSourceChanged += new System.EventHandler(this.FoundWordsGrid_DataSourceChanged);
+            this.FoundWordsGrid.DataBindingComplete += new System.Windows.Forms.DataGridViewBindingCompleteEventHandler(this.FoundWordsGrid_DataBindingComplete);
             // 
             // categorySymbolFrequencyBindingSource
             // 

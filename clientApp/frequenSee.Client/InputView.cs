@@ -23,6 +23,13 @@ namespace frequenSee.Client
         {
             base.OnLoad(e);
             this.analyzationRequestBindingSource.DataSource = new AnalyzationRequest();
+            this.SetDefaults();
+        }
+
+        private void SetDefaults()
+        {
+            this.AnalyzeLetters.Checked = true;
+            this.AnalyzeWords.Checked = true;
         }
 
         private void RunAnalisis_Click(object sender, EventArgs e)
@@ -49,6 +56,23 @@ namespace frequenSee.Client
         {
             AnalyzationRequest request = (AnalyzationRequest)this.analyzationRequestBindingSource.DataSource;
             request.AnalyzationType = request.AnalyzationType | DigestType.Words;
+        }
+
+        private void InputFilePath_TextChanged(object sender, EventArgs e)
+        {
+            this.InputText.Clear();
+        }
+
+        private void InputText_TextChanged(object sender, EventArgs e)
+        {
+            this.InputFilePath.Clear();
+        }
+
+        private void BrowseInputFile_Click(object sender, EventArgs e)
+        {
+            DialogResult res = this.openFileDialog1.ShowDialog();
+            this.InputFilePath.Text = this.openFileDialog1.FileName;
+            ((AnalyzationRequest)this.analyzationRequestBindingSource.DataSource).InputFilePath = this.openFileDialog1.FileName;
         }
     }
 }

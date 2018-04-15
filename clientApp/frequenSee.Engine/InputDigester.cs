@@ -56,13 +56,16 @@
             }
             else
             {
-                result.AppendSymbolToCache(c);
+                if (Char.IsLetter(c))
+                {
+                    result.AppendSymbolToCache(c);
+                }
             }
         }
 
         private static void PopCacheToWordDictionary(WordFrequencyResultSet result)
         {
-            string word = result.CachOut().Trim();
+            string word = result.CachOut().Trim().ToLower();
 
             if (!string.IsNullOrEmpty(word))
             {

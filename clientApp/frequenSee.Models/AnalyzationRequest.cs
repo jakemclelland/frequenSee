@@ -2,6 +2,8 @@
 {
     public class AnalyzationRequest
     {
+        public string InputFilePath { get; set; }
+
         public string InputText { get; set; }
 
         public DigestType AnalyzationType { get; set; }
