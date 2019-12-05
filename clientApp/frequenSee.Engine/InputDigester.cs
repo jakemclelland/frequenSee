@@ -50,13 +50,13 @@
 
         private static void UpdateWordFrequency(WordFrequencyResultSet result, char c)
         {
-            if (Char.IsWhiteSpace(c))
+            if (char.IsWhiteSpace(c))
             {
                 PopCacheToWordDictionary(result);
             }
             else
             {
-                if (Char.IsLetter(c))
+                if (char.IsLetter(c))
                 {
                     result.AppendSymbolToCache(c);
                 }
