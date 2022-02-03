@@ -30,6 +30,7 @@ Examples of unacceptable behavior by participants include:
   address, without explicit permission
 * Other conduct which could reasonably be considered inappropriate in a
   professional setting
+* Introduction of code for malicious intent, or that would violate this or any other end user agreement or copyright
 
 ## Our Responsibilities
 
